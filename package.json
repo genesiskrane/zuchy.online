@@ -1,0 +1,26 @@
+{
+	"name": "zuchy.online",
+	"version": "1.0.0",
+	"description": "Wine Market Server",
+	"homepage": "https://github.com/genesiskrane/zuchy.online#readme",
+	"bugs": {
+		"url": "https://github.com/genesiskrane/zuchy.online/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/genesiskrane/zuchy.online.git"
+	},
+	"license": "ISC",
+	"author": "Genesis Krane",
+	"type": "commonjs",
+	"main": " ",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^5.1.0",
+		"morgan": "^1.10.0"
+	}
+}
