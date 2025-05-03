@@ -9,11 +9,9 @@ app.use(cors());
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "client", "dist")));
 
-// Catch All
-app.all("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+app.get("/", (_, res) => {
+	res.json({ name: "Zuchy Online" });
 });
 
 const PORT = process.env.PORT || 3000;
