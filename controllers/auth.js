@@ -49,7 +49,7 @@ const registerVendor = async (req, res) => {
 
 		// SAVE TO GKRANE
 		try {
-			const { data } = await gkrane.post("/register-vendor", {
+			 await gkrane.post("/register-vendor", {
 				uid: userRecord.uid,
 				displayName: userRecord.displayName,
 				email: userRecord.email,
