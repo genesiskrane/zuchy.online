@@ -1,5 +1,7 @@
-// const init = () => {
-// 	console.log("Initializing");
-// };
+const connect = require("../db").connectToDatabase;
 
-// module.exports = { init };
+const init = async () => {
+	await connect();
+};
+
+module.exports = { init };

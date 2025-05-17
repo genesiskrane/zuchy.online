@@ -1,4 +1,5 @@
-require("dotenv").config();
+require("./config");
+const { init } = require("./core");
 
 const express = require("express");
 const morgan = require("morgan");
@@ -37,6 +38,10 @@ app.all("/{*any}", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-	console.log(`Server Started @ ${PORT}`);
-});
+(async () => {
+	await init();
+
+	app.listen(PORT, () => {
+		console.log(`Server Started @ ${PORT}`);
+	});
+})();
