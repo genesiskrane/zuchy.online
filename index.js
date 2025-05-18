@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
 
 app.get("/", (_, res) => {
-	res.json({ name: "Zuchy Online" });
+	res.json({ name: `${process.env.APP_NAME} Online` });
 });
 
 // Catch All

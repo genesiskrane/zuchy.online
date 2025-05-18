@@ -16,6 +16,8 @@ const customerSchema = new mongoose.Schema(
 					const profile = {
 						_id: this._id,
 						displayName: this.displayName,
+						email: this.email,
+						account: "customer",
 					};
 					return profile;
 				},

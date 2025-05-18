@@ -3,12 +3,14 @@ const router = express.Router();
 const controller = require("../controllers");
 
 
-// auth
-router.post("/auth/register-customer", controller.registerCustomer);
-router.post("/auth/register-vendor", controller.registerVendor);
+// AUTHENTICATIONS
+router.post("/register-customer", controller.registerCustomer);
+router.post("/register-vendor", controller.registerVendor);
+
+// APP
+router.get("/get-user", controller.getUser);
 
 // Vendor
-// router.get("/vendor", controller.getApp);
 // router.get("/app/getProfile", controller.getProfile);
 
 module.exports = router;

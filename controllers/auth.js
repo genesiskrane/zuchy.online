@@ -49,11 +49,11 @@ const registerVendor = async (req, res) => {
 
 		// SAVE TO GKRANE
 		try {
-			 await gkrane.post("/register-vendor", {
+			await gkrane.post("/register-vendor", {
 				uid: userRecord.uid,
 				displayName: userRecord.displayName,
 				email: userRecord.email,
-				vendor: "wine-&-alcohol",
+				vendor: process.env.APP_MARKET,
 			});
 
 			// SAVE TO MONGODB

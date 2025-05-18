@@ -19,6 +19,8 @@ const vendorSchema = new mongoose.Schema(
 					const profile = {
 						_id: this._id,
 						displayName: this.displayName,
+						email: this.email,
+						account: "vendor",
 					};
 					return profile;
 				},
